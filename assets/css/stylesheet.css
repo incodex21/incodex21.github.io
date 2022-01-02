@@ -96,7 +96,6 @@ div, section, span, ul, li, a, header {
 section {
 	margin: 0 auto;
 	width: 100%;
-	float: left;
 }
 
 #home {
