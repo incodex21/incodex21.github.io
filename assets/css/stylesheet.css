@@ -1,3 +1,9 @@
+body {
+	background: #292727;
+	overflow-x: hidden;
+	padding-bottom: 50px;
+}
+
 hr {
 	height: 4px;
 	background-color: #fff;
@@ -7,12 +13,6 @@ hr {
 
 h1 {
 	text-transform: uppercase;
-}
-
-body {
-	background: #292727;
-	overflow-x: hidden;
-	padding-bottom: 50px;
 }
 
 div, section, span, ul, li, a, header {
