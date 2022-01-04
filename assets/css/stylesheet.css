@@ -327,6 +327,9 @@ time {
     border-width: 8px 16px 8px 0;
     border-color: transparent #f45b69 transparent transparent;
   }
+  #home-content-headline{
+    font-size:50px;
+  }
 }
 
 
@@ -448,4 +451,21 @@ time {
 .footer p {
   font-size: 20px;
   text-transform: uppercase;
+}
+
+.descrip{
+  background-color: #ff8c47 ;
+  width: 100%;
+  padding: 5px;
+  margin: 5% 0%;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 25px;
+}
+.descrip:hover{
+  background-color: #000000 ;
+  color: #ff8c47;
+  border-style: solid;
+  border-color: #ff8c47;
+  margin: 5% 0%;
 }
