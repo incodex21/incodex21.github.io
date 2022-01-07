@@ -1,19 +1,21 @@
 .cards {
   display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
   flex-wrap: wrap;
   margin-top: 15px;
   padding: 1.5%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  align-items:stretch;
+  row-gap: 40px;
 }
 
 .card {
   position: relative;
   margin-bottom: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   background: #fefff9;
   color: #363636;
   text-decoration: none;
@@ -22,7 +24,11 @@
   box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  border-radius: 4px;
+  border-radius: 40px 0;
+}
+.cardimg{
+  border-radius: 40px 0 0 0;
+  height: 40%;
 }
 @media (max-width: 700px) {
   .card {
@@ -32,16 +38,17 @@
 @media (min-width: 700px) {
   .card {
     max-width: 320px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     margin-bottom: 20px;
   }
   .card:nth-child(even) {
     margin-right: 0;
+    /* margin-left: 20px; */
   }
 }
 @media (min-width: 980px) {
   .card:nth-child(even) {
-    margin-right: 20px;
+    /* margin-right: 20px; */
   }
   .card:nth-child(3n) {
     margin-right: 0;
@@ -79,11 +86,12 @@
   bottom: 0;
   width: 100%;
 }
-.card .card-title h3 {
+.card .card-title {
   font-size: 1.2em;
   line-height: 1.2;
   padding: 0 3.5%;
   margin: 0;
+  margin-bottom: 30px;
 }
 .card .card-meta {
   max-height: 0;
@@ -138,3 +146,5 @@ img {
   -webkit-transition-timing-function: linear;
   transition-timing-function: linear;
 }*/
+
+

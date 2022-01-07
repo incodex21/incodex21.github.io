@@ -1,428 +1,894 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="ie=edge" http-equiv="X-UA-Compatible" />
     <meta content="INCODE-X" name="description" />
-    <meta content="Mobile Development, Hackathon, incodex, getsync" name="keywords" />
+    <meta
+      content="Mobile Development, Hackathon, incodex, getsync"
+      name="keywords"
+    />
     <meta content="GetSync" name="author" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="ie=edge" http-equiv="X-UA-Compatible" />
-       
+
+
     <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/timer.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/navbar.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/sponsors.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/timer.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/sponsors.css" />
 
-	<!-- Gfonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-	
-	<!-- Fontawesome -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<!-- Title -->
-	<title>Incode - X</title>
-</head>
-<body>
-	<dev class="site-main-wrapper clearfix">
-		<!-- navigation bar start -->
-			<nav class="nav">
-        		<div class="container">
-            		<div class="logo">
-               	 	<a href="#home"><img src="assets/img/logo-notext.png"></a>
-            		</div>
-            	
-            		<div id="mainListDiv" class="main_list">
-                
-                		<ul class="navlinks">
-                    		<li><a href="#timeline">Timeline</a></li>
-                    		<li><a href="#sponsors">Sponsors</a></li>
-                    		<li><a href="#register">Register</a></li>
-                    		<li><a href="#faq">FAQ</a></li>
-							<li><a href="#contact">Contacts</a></li>
-                		</ul>
-            	
-            		</div>
-            	
-            		<span class="navTrigger">
-                		<i></i>
-                		<i></i>
-                		<i></i>
-            		</span>
-        		</div>
-    		</nav>
-    	<!-- navigation bar end -->
-		<!-- Jquery needed -->
-    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    	<script src="js/scripts.js"></script>
-    	<script>
-        	$(window).scroll(function() {
-           		if ($(document).scrollTop() > 50) {
-               		$('.nav').addClass('affix');
-               		console.log("OK");
-           		} else {
-               		$('.nav').removeClass('affix');
-           		}
-        	});
-    	</script>
-    	<script type="text/javascript" src="assets/js/nav.js"></script>
+    <!-- Gfonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- swiper css file -->
+    <link	rel="stylesheet"	href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 
-		<!-- home section start -->
-		<section id="home" class="home">
-			<div class="parallelogram" id="one"></div>
-			<div class="parallelogram" id="two"></div>
-			<div class="parallelogram" id="three"></div>
-			<div class="parallelogram" id="four"></div>
-			<div class="parallelogram" id="five"></div>
-			<div class="parallelogram" id="six"></div>
+    <!-- swiper JS file -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
-			<!-- home section content start -->
-			
-				<h1 id="home-content-headline">INCODE-X</h1>
-				<p id="home-content-tagline">Leading edge to the next gen</p>
-			<!-- timer start -->
-			<center>
-				<h1 style="font-size: 76px; color: #f7931e;">Starts In</h1>
-				<div class="tick" data-did-init="handleTickInit" style="
-				width: 90vmin;
-				margin: 0;
-				padding: 100px;
-				align-content: center;
-				justify-content: center;
-				display: flex;
-				background-color: rgba(255, 255, 255, 0.2);
-				border: none;
-				align-items: center;
-				border-radius: 30px;" id="timer">
-    				<div data-repeat="true" data-layout="horizontal center fit" data-transform="preset(d, h, m, s) -> delay">
-        				<div class="tick-group">
-            				<div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
-                				<span data-view="flip"></span>
-            				</div>
-            				<span data-key="label" data-view="text" class="tick-label"></span>
+
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Title -->
+    <title>Incode - X</title>
+    <link rel="icon" href="assets/img/Logo Circle.png">
+  </head>
+  <body>
+    <dev class="site-main-wrapper clearfix">
+      <!-- navigation bar start -->
+      <nav class="nav">
+        <div class="container">
+          <div class="logo">
+            <a href="#home"><img src="assets/img/logo-notext.png" /></a>
+          </div>
+
+          <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+              <li><a href="#post">Post</a></li>
+              <li><a href="#timeline">Timeline</a></li>
+              <li><a href="#sponsors">Sponsors</a></li>
+              <li><a href="#prizes">Prizes</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#contact">Contacts</a></li>
+            </ul>
+          </div>
+
+          <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+          </span>
+        </div>
+      </nav>
+      <!-- navigation bar end -->
+      <!-- Jquery needed -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="js/scripts.js"></script>
+      <script>
+        $(window).scroll(function () {
+          if ($(document).scrollTop() > 50) {
+            $(".nav").addClass("affix");
+            console.log("OK");
+          } else {
+            $(".nav").removeClass("affix");
+          }
+        });
+      </script>
+      <script type="text/javascript" src="assets/js/nav.js"></script>
+
+      <!-- home section start -->
+      <section id="home" class="home">
+        <div class="parallelogram" id="one"></div>
+        <div class="parallelogram" id="two"></div>
+        <div class="parallelogram" id="three"></div>
+        <div class="parallelogram" id="four"></div>
+        <div class="parallelogram" id="five"></div>
+        <div class="parallelogram" id="six"></div>
+
+        <!-- home section content start -->
+
+        <h1 id="home-content-headline">INCODE-X</h1>
+        <p id="home-content-tagline">Leading edge to the next gen</p>
+        <!-- timer start -->
+        <center>
+          <h2 style="font-size: 76px; color: #f7931e">Starts In</h2>
+          <div
+            class="tick"
+            data-did-init="handleTickInit"
+            style="
+              width: 90vmin;
+              margin: 0;
+              padding: 100px;
+              align-content: center;
+              justify-content: center;
+              display: flex;
+              background-color: rgba(255, 255, 255, 0.2);
+              border: none;
+              align-items: center;
+              border-radius: 30px;
+            "
+            id="timer"
+          >
+            <div
+              data-repeat="true"
+              data-layout="horizontal center fit"
+              data-transform="preset(d, h, m, s) -> delay"
+            >
+              <div class="tick-group">
+                <div
+                  data-key="value"
+                  data-repeat="true"
+                  data-transform="pad(00) -> split -> delay"
+                >
+                  <span data-view="flip"></span>
+                </div>
+                <span
+                  data-key="label"
+                  data-view="text"
+                  class="tick-label"
+                ></span>
+              </div>
+            </div>
+          </div>
+        </center>
+        <!-- timer end -->
+
+
+        <center>
+          <div class="descrip">
+            <h1>
+              <center>Description</center>
+            </h1>
+            <hr class="hrss" />
+            <p>
+              'INCODE-X' is a unique project to be launched in 2022 to empower
+              the innovation process with new ideas. Basically this is going to
+              be a series of panel discussions and a competition. This project
+              consists two main phases, the main objective of the project is to
+              give you the opportunity to showcase your talents to the world.
+              This international platform is presented to you as another
+              milestone in the future journey of the GetSync Club of the Sri
+              Lanka Technological Campus. This is a exclusive opportunity for
+              you who dream of overcoming challenges and moving on to a new path
+              and making your idea a reality. Seize the chance!!
+            </p>
+          </div>
+        </center>
+        <!-- link javascript -->
+        <script type="text/javascript" src="assets/js/timer.js"></script>
+        <!-- home section content end -->
+      </section>
+      <!-- home section end -->
+
+
+      <section id="post">
+        <!-- slider -->
+        <center>
+          <h1
+            style="
+              font-size: 76px;
+              margin: 0;
+              padding: 4rem 0rem 4rem 0rem;
+              color: #f7931e;
+            "
+          >
+            POST
+          </h1>
+        </center>
+  <br>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide post-body">
+            <p class="post-headline">Post</p>
+            <img src="assets/img/post/post1.jpg" alt="" class="post-img">
+            <!-- details -->
+    
+            <div class="post-details"><p>✨Learning about modern technologies,<br>Attempting to innovate,<br>Knowledge of Mobile Application, 📲<br>Dreaming of new concepts while studying IT and technology, 💻<br>To make your thoughts a reality, 😇<br><br><i>The unique opportunity we introduce to you.</i>✨<br><br><b>INCODE-X' 21 </b>🔥<br>Leading edge to the next gen<br><br><i>Panel Discussion & Competition on</i><br><i>Mobile Applications</i> 📱<br><br>The exclusive project launched by the <b>GetSync Club</b> of <b>Sri Lanka Technological Campus</b> to empower the next generation.<br><br><b>Registrations</b> are now open 👇<br><a href="https://docs.google.com/forms/d/e/1FAIpQLSf_IoQiiOnScoWcb4pLSmk26talt0VIAX5Pocyg4UIssg63vg/viewform?usp=sf_link">Click Here</a><br><br>Visit our <b>website</b> for more information 👇<br><br><a href="https://incode-x.github.io/Official-Site/">https://incode-x.github.io/Official-Site/</a><br><i>The change is coming.</i> 💡<br><b>Be prepared.</b>⏰<br>#INCODE-X<br>#GetSync<br>#SLTC</p>
+            </div>
+    
+    
+          </div>
+            <div class="swiper-slide post-body">
+            <p class="post-headline">Post</p>
+            <img src="assets/img/post/post1.jpg" alt="" class="post-img">
+            
+            <div class="post-details"><p>✨Learning about modern technologies,<br>Attempting to innovate,<br>Knowledge of Mobile Application, 📲<br>Dreaming of new concepts while studying IT and technology, 💻<br>To make your thoughts a reality, 😇<br><br><i>The unique opportunity we introduce to you.</i>✨<br><br><b>INCODE-X' 21 </b>🔥<br>Leading edge to the next gen<br><br><i>Panel Discussion & Competition on</i><br><i>Mobile Applications</i> 📱<br><br>The exclusive project launched by the <b>GetSync Club</b> of <b>Sri Lanka Technological Campus</b> to empower the next generation.<br><br><b>Registrations</b> are now open 👇<br><a href="https://docs.google.com/forms/d/e/1FAIpQLSf_IoQiiOnScoWcb4pLSmk26talt0VIAX5Pocyg4UIssg63vg/viewform?usp=sf_link">Click Here</a><br><br>Visit our <b>website</b> for more information 👇<br><br><a href="https://incode-x.github.io/Official-Site/">https://incode-x.github.io/Official-Site/</a><br><i>The change is coming.</i> 💡<br><b>Be prepared.</b>⏰<br>#INCODE-X<br>#GetSync<br>#SLTC</p>
+            </div>
+    
+    
+          </div>
+  
+          </div><!--Swiper wrapper-->
+          </div>
+        
+        
+  
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "cards",
+          grabCursor: true,
+        });
+      </script>
+      </section>
+
+
+      <section id="timeline" class="timeline">
+        <center>
+          <h1
+            style="
+              font-size: 76px;
+              margin: 0;
+              padding: 4rem 0rem 4rem 0rem;
+              color: #f7931e;
+            "
+          >
+            Timeline &darr;
+          </h1>
+        </center>
+
+        <div class="timeline-class">
+          <ul>
+            <li>
+              <div>
+                <time class="timelinetime">* Launching the project - 2nd of January 2022</time>
+                Basically, this is going to be a series of panel discussions and
+                a competition. At this stage the initial introduction of the
+                project is done. You can get a brief idea of the panel
+                discussion series and the competition here.
+              </div>
+            </li>
+            <li>
+              <div>
+                <time class="timelinetime">* Commencement of registration - 5th of January 2022</time>
+                Here you will have the opportunity to register for the panel
+                discussion series and the competition. We will provide a special
+                form to enter your information.
+              </div>
+            </li>
+            <li>
+              <div>
+                <time class="timelinetime">* 1st panel discussion - 4th of February 2022</time>
+                This is the beginning of our panel discussion series. The post
+                graduate and the global academic lectures will guide you in the
+                way towards becoming success.<br />Do not miss this opportunity.
+              </div>
+            </li>
+            <li>
+              <div>
+                <time class="timelinetime">* 2nd panel discussion - 18th of February 2022</time>
+                This is the second day of our panel discussion series. The
+                global and local industry experts will conduct the session with
+                their experiences and this will give you an idea of the path to
+                the industrial field of your choice. Do not miss out.
+              </div>
+            </li>
+            <li>
+              <div>
+                <time class="timelinetime">* Final panel discussion - 4th of March 2022</time>
+                This is the last day in a series of panel discussions. Both the
+                academic and the postgraduate lectures & industrial experts will
+                collaborate and join to the final discussion. This series of
+                panel discussions will help you to enter the competition. Save
+                your time.
+              </div>
+            </li>
+            <li>
+              <div>
+                <time class="timelinetime">* Idea Stage - 6th of March – 13th of March 2022</time>
+                Here the first phase is completed and the second phase is to be
+                introduced. Details of your team members and selected themes
+                should be finalized and submitted to us within a week.
+              </div>
+            </li>
+            <li>
+              <div>
+                <time class="timelinetime">* Innovative mobile app creation stage - 15th of March - 28th
+                  of April 2022</time>
+                The best teams are selected through a panel of judges.
+              </div>
+            </li>
+            <li>
+              <div>
+                <time class="timelinetime">* Announcing the final winners –2nd June 2022</time>
+                The end of the competition. Your designs will not be accepted
+                after this date and we will meet with the winners shortly.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- info section start -->
+      <section id="sponsors" class="sponsorsclass">
+        <!-- sponsors section content start -->
+        <center><h1 style="font-size: 76px; color: #f7931e">Sponsors</h1></center>
+
+        <div class="cards">
+          <a class="card" >
+            <img
+              src="assets/img/sponsors/ideamart.jpg"
+              alt="Avatar"
+              style="width: 100%; height: 100%"
+              class="cardimg"
+            />
+            <span class="card-title"><h2>Platinum Sponsor| Ideamart</h2></span>
+          </a>
+
+          <a class="card" >
+            <img
+              src="assets/img/sponsors/ifs.png"
+              alt="Avatar"
+              style="width: 100%; height: 100%"
+              class="cardimg"
+            />
+            <span class="card-title">
+              <h2>
+                Silver Sponsors <br />
+                IFS
+              </h2>
+            </span>
+          </a>
+
+          <a class="card" >
+            <img
+              src="assets/img/sponsors/vpsp.png"
+              alt="Avatar"
+              style="width: 100%; height: 100%"
+              class="cardimg"
+            />
+            <span class="card-title">
+              <h2>Silver Sponsors | VPS research consultants</h2>
+            </span>
+          </a>
+
+          <a class="card" >
+            <img
+              src="assets/img/sponsors/walkerst.png"
+              alt="Avatar"
+              style="width: 100%; height: 100%"
+              class="cardimg"
+            />
+            <span class="card-title">
+              <h2>
+                official travel partner<br />
+                flex tours
+              </h2>
+            </span>
+          </a>
+
+          <a class="card">
+            <img
+              src="assets/img/sponsors/campusg.png"
+              alt="Avatar"
+              style="width: 80%; margin: 10%; border-radius: 0; height: 70%"
+              class="cardimg"
+            />
+            <span class="card-title">
+              <h2>
+                Community Partner <br />
+                Campus Cluster
+              </h2>
+            </span>
+          </a>
+
+          <a class="card">
+            <img
+              src="assets/img/sponsors/ISACA_logo_SriLanka_rev_RGB.png"
+              alt="Avatar"
+              style="width: 70%; margin: 10%; border-radius: 0; height: 65%"
+              class="cardimg"
+            />
+            <span class="card-title">
+              <h2>
+                Community Partner <br />
+                ISACA Sri Lanka Chapter
+              </h2>
+            </span>
+          </a>
+
+          <a class="card" >
+            <img
+              src="assets/img/sponsors/CampusGtta.png"
+              alt="Avatar"
+              style="width: 80%; margin: 10%; border-radius: 0; height: 65%"
+              class="cardimg"
+            />
+            <span class="card-title">
+              <h2>
+                Community Partner <br />
+                Campus Gatta
+              </h2>
+            </span>
+          </a>
+
+          <a class="card">
+            <img
+              src="assets/img/sponsors/FITISWhiteLogo.jpg"
+              alt="Avatar"
+              style="width: 100%; height: 100%"
+              class="cardimg"
+            />
+            <span class="card-title">
+              <h2>
+                Community Partner <br />
+                FITIS
+              </h2>
+            </span>
+          </a>
+        </div>
+
+        <!-- sponsors section content end -->
+      </section>
+      <!-- info section stop -->
+      <!-- about section start -->
+
+      <section id="prizes">
+        <!-- register section content start -->
+        <center>
+          <h1 style="font-size: 76px; color: #f7931e">
+            PRIZE POOL
+          </h1>
+        </center>
+		<style>
+:root {
+  --surface-color: #fff;
+  --curve: 40;
+}
+.cards {
+
+  gap: 20px;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+}
+
+.cardx {
+  position: relative;
+  display: block;
+  height: 100%;
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
+}
+
+.card__overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: calc(var(--curve) * 1px);
+  background-color: var(--surface-color);
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.cardx:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}
+
+.cardx:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 .3em;
+  color: #fff;
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-family: "MockFlowFont";
+  font-size: .8em;
+  color: #D7BDCA;
+}
+
+.card__status {
+  font-size: .8em;
+  color: #D7BDCA;
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: #D7BDCA;
+  font-family: "MockFlowFont";
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.local{
+	padding-top: 5px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.global{
+  padding: 20px 0 20px 0;
+  margin: 20px 0 20px 0;
+}
+.cardtd{
+	transition: transform .2s;
+}
+.cardtd:hover{
+	transform: scale(1.1);
+}
+.cardtdx{
+	transform: scale(1.1);
+	transition: transform .2s;
+}
+.cardtdx:hover{
+	transform: scale(1.2);
+}
+
+@media (max-width: 1120px) {
+  .cardsx{
+    flex-direction: column;
+    align-items: center;
+  }
+  .cardfirst{
+	order: -1
+  }
+  }
+
+		</style>
+<div class="local">
+	<center> <h2 class="headlocal" style="font-size: 60px; color: #FFF89A;">Local</h2> </center>
+		<ul class="cards cardsx">
+
+
+
+			<li>
+			  <a class="cardx card cardtd">
+				<img src="assets/img/prizes/Secondplace.png" class="card__image" alt="" />
+				<div class="card__overlay">
+				  <!-- <div class="card__header">
+					<svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+					<img class="card__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" />
+					<div class="card__header-text">
+					  <h3 class="card__title">Jessica Parker</h3>
+					  <span class="card__status">1 hour ago</span>
+					</div>
+				  </div>
+				  <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+				</div> -->
+			  </a>
+			</li>
+			<li class="cardfirst">
+			  <a  class="cardx card cardtdx" >
+				<img src="assets/img/prizes/Firstplace.png" class="card__image" alt="" />
+				<!-- <div class="card__overlay">
+				  <div class="card__header">
+					<svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+					<img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />
+					<div class="card__header-text">
+					  <h3 class="card__title">kim Cattrall</h3>
+					  <span class="card__status">3 hours ago</span>
+					</div>
+				  </div>
+				  <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+				</div> -->
+			  </a>
+			</li>
+			<li>
+			  <a  class="cardx card cardtd">
+				<img src="assets/img/prizes/Thirdplace.png" class="card__image" alt="" />
+				<!-- <div class="card__overlay">
+				  <div class="card__header">
+					<svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+					<img class="card__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" />
+					<div class="card__header-text">
+					  <h3 class="card__title">Jessica Parker</h3>
+					  <span class="card__tagline">Lorem ipsum dolor sit amet consectetur</span>
+					  <span class="card__status">1 hour ago</span>
+					</div>
+				  </div>
+				  <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+				</div> -->
+			  </a>
+			</li>
+
+		  </ul>
+		</div>
+
+
+
+
+		<div class="global">
+			<center> <h2 style="font-size: 60px; color: #FFF89A;">Global</h2> </center>
+			<ul class="cards cardsx">
+
+				<li>
+				  <a  class="cardx card cardtd">
+					<img src="assets/img/prizes/glb/1.png" class="card__image" alt="" />
+					<!-- <div class="card__overlay">
+					  <div class="card__header">
+						<svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+						<img class="card__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" />
+						<div class="card__header-text">
+						  <h3 class="card__title">Jessica Parker</h3>
+						  <span class="card__status">1 hour ago</span>
 						</div>
-					</div>
-				</div>
-			</center>
-			<!-- timer end -->
-
-			<!-- link javascript -->
-			<script type="text/javascript" src="assets/js/timer.js"></script>
-			<!-- home section content end -->
-		
-		</section>
-		<!-- home section end -->
-
-		<section id="timeline" class="timeline">
-			<center><h1 style="font-size: 76px; margin: 0; padding: 4rem 0rem 4rem 0rem; color: #fff;">Timeline &darr;</h1></center>
-	
-			<div class="timeline-class">
-				<ul>
-					<li>
-					<div>
-						<time>* Launching the project - 2nd of January 2022</time>
-						Basically, this is going to be a series of panel discussions and a competition. At this stage the initial introduction of the project is done. You can get a brief idea of the panel discussion series and the competition here.
-					</div>
+					  </div>
+					  <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+					</div> -->
+				  </a>
 				</li>
-					<li>
-					<div>
-					<time>* Commencement of registration - 5th of January 2022</time>
-					Here you will have the opportunity to register for the panel discussion series and the competition. We will provide a special form to enter your information.
-				</div>
-			</li>
-			<li>
-				<div>
-					<time>* 1st panel discussion - 4th of February 2022</time>
-					This is the beginning of our panel discussion series. The post graduate and the global academic lectures will guide you in the way towards becoming success.<br>Do not miss this opportunity.
-				</div>
-			</li>
-			<li>
-				<div>
-					<time>* 2nd panel discussion - 18th of February 2022</time>
-					This is the second day of our panel discussion series. The global and local industry experts will conduct the session with their experiences and this will give you an idea of the path to the industrial field of your choice. Do not miss out.
-				</div>
-			</li>
-			<li>
-				<div>
-					<time>* Final panel discussion - 4th of March 2022</time>
-					This is the last day in a series of panel discussions.  Both the academic and the postgraduate lectures & industrial experts will collaborate and join to the final discussion. This series of panel discussions will help you to enter the competition. Save your time.
-				</div>
-			</li>
-			<li>
-				<div>
-					<time>* Idea Stage - 6th of March – 13th of March 2022</time>
-					Here the first phase is completed and the second phase is to be introduced. Details of your team members and selected themes should be finalized and submitted to us within a week.
-				</div>
-			</li>
-			<li>
-				<div>
-					<time>* Innovative mobile app creation stage - 15th of March - 28th of April 2022</time>
-					The best teams are selected through a panel of judges.
-				</div>
-			</li>
-			<li>
-				<div>
-					<time>* Announcing the final winners –2nd June 2022</time>
-					The end of the competition. Your designs will not be accepted after this date and we will meet with the winners shortly.
-				</div>
-			</li>
-		</ul>
-	</div>
-	</section>
-	<!-- info section start -->
-	<section id="sponsors">
-		<!-- sponsors section content start -->
-		<center> <h1 style="font-size: 76px; color: #fff;">Sponsors</h1> </center>
-		<div class="cards">
-		<a class="card" href="#sponsors">
-			<span class="card-header" style='background-image: url("assets/img/sponsors/campusg.png");'>
-				<span class="card-title">
-					<h3>Communication Partner | Campus Cluster</h3>
-				</span>
-			</span>
-			<span class="card-summary">
-				Each card is created from an &lt;a&gt; tag so the whole card is linked.
-			</span>
-			<span class="card-meta">
-				Published: June 18th, 2015
-			</span>
-		</a>
-		
-		<a class="card" href="#sponsors">
-			<span class="card-header" style='background-image: url("assets/img/sponsors/ideamart.jpg");'>
-				<span class="card-title">
-					<h3>Platinum Partner | Ideamart</h3>
-				</span>
-			</span>
-			<span class="card-summary">
-				A summary will also be present. Usually two to three brief sentences about the content on the detail page.
-			</span>
-			<span class="card-meta">
-				Published: June 18th, 2015
-			</span>
-		</a>
+				  <a  class="cardx card cardtd">
+					<img src="assets/img/prizes/glb/2.png" class="card__image" alt="" />
+					<!-- <div class="card__overlay">
+					  <div class="card__header">
+						<svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+						<img class="card__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" />
+						<div class="card__header-text">
+						  <h3 class="card__title">Jessica Parker</h3>
+						  <span class="card__tagline">Lorem ipsum dolor sit amet consectetur</span>
+						  <span class="card__status">1 hour ago</span>
+						</div>
+					  </div>
+					  <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+					</div> -->
+				  </a>
+				</li>
 
-		<a class="card" href="#sponsors">
-			<span class="card-header" style='background-image: url("");'>
-				<span class="card-title">
-					<h3>Gold Partner</h3>
-				</span>
-			</span>
-			<span class="card-summary">
-				Each card is created from an &lt;a&gt; tag so the whole card is linked.
-			</span>
-			<span class="card-meta">
-				Published: June 18th, 2015
-			</span>
-		</a>
-		
-		<a class="card" href="#">
-			<span class="card-header" style='background-image: url("assets/img/sponsors/ifs.png");'>
-				<span class="card-title">
-					<h3>Silver Partner | IFS</h3>
-				</span>
-			</span>
-			<span class="card-summary">
-				Using Flexbox is such a an easy, well supported way for grid-style content, such as cards. The cards height will expand to match the longest item.
-			</span>
-			<span class="card-meta">
-				Published: June 18th, 2015
-			</span>
-		</a>
-
-		<a class="card" href="#">
-			<span class="card-header" style='background-image: url("assets/img/sponsors/vpsp.png");'>
-				<span class="card-title">
-					<h3>Silver Partner | VPS Projects</h3>
-				</span>
-			</span>
-			<span class="card-summary">
-				A summary will also be present. Usually two to three brief sentences about the content on the detail page.
-			</span>
-			<span class="card-meta">
-				Published: June 18th, 2015
-			</span>
-		</a>
-		
-		<a class="card" href="#">
-			<span class="card-header" style='background-image: url("assets/img/sponsors/walkerst.png");'>
-				<span class="card-title">
-					<h3>Partnership</h3>
-				</span>
-			</span>
-			<span class="card-summary">
-				Each card is created from an &lt;a&gt; tag so the whole card is linked.
-			</span>
-			<span class="card-meta">
-				Published: June 18th, 2015
-			</span>
-		</a>
-		</div>
-		
-		
-		<!-- sponsors section content end -->
-	</section>
-	<!-- info section stop -->
-	<!-- about section start -->
-	
-	<section id="register">
-		<!-- register section content start -->
-		<center> <h1 style="font-size: 46px; color: #fff;">Register for Panel Discussion</h1>
-		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf_IoQiiOnScoWcb4pLSmk26talt0VIAX5Pocyg4UIssg63vg/viewform?embedded=true" width="640" height="1520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></center>
-		<!-- register section content end -->
-	</section>
-	
-	<section id="faq" class="faq-section">
-		<!-- faq section content start -->
-		<h1>FAQ</h1>
-		<div class="faq-container">
-		<!-- Accordion Starts-->
-		<div class="acc">
-			<h3>1. How do the registration process of the panel discussion happens?</h3>
-			<div class="content">
-				<div class="content-inner">
-					<p>There is a Website related to the project INCODE-X.  There you can find the registration link for the panel discussion and You can register to the panel discussion using that given link.</p>
-				</div>
+			  </ul>
 			</div>
-		</div>
+        <!-- register section content end -->
+      </section>
 
-		<!-- Accordian -->
-		<div class="acc">
-			<h3>2. What are the languages that can be used in the competition phase?</h3>
-			<div class="content">
-				<div class="content-inner">
-					<p>The competitors can create the app on android and ios using Java, Kotlin and C++ . As well you can use any language to code the app according to your preferences .</p>
-				</div>
-			</div>
-		</div>
+      <section id="faq" class="faq-section">
+        <!-- faq section content start -->
+        <h1>FAQ</h1>
+        <div class="faq-container">
+          <!-- Accordion Starts-->
+          <div class="acc">
+            <h3>
+              1. How do the registration process of the panel discussion
+              happens?
+            </h3>
+            <div class="content">
+              <div class="content-inner">
+                <p>
+                  There is a Website related to the project INCODE-X. There you
+                  can find the registration link for the panel discussion and
+                  You can register to the panel discussion using that given
+                  link.
+                </p>
+              </div>
+            </div>
+          </div>
 
-		<!-- Accordian -->
-		<div class="acc">
-			<h3>3. How will  the final app be selected?</h3>
-			<div class="content">
-				<div class="content-inner">
-					<p>The top 20 apps (10 globally and 10 locally) will be selected by a judge panel considering the best innovative idea and the way that the app has been build up.<p>
-				</div>
-			</div>
-		</div>
+          <!-- Accordian -->
+          <div class="acc">
+            <h3>
+              2. What are the languages that can be used in the competition
+              phase?
+            </h3>
+            <div class="content">
+              <div class="content-inner">
+                <p>
+                  The competitors can create the app on android and ios using
+                  Java, Kotlin and C++ . As well you can use any language to
+                  code the app according to your preferences .
+                </p>
+              </div>
+            </div>
+          </div>
 
-		<!-- Accordian -->
-		<div class="acc">
-			<h3>4. Contact US</h3>
-			<div class="content">
-				<div class="content-inner">
-					<p>getsync@sltc.ac.lk</p><br>
-					<p>incodex2021@gmail.com</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	</section>
-	<!-- faq section content end -->
-	
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('.acc h3').click(function(){
-				$(this).next('.content').slideToggle();
-				$(this).parent().toggleClass('active');
-		$(this).parent().siblings().children('.content').slideUp();
-		$(this).parent().siblings().removeClass('active');
-		});
-		});
-	</script>
-	
+          <!-- Accordian -->
+          <div class="acc">
+            <h3>3. How will the final app be selected?</h3>
+            <div class="content">
+              <div class="content-inner">
+                <p>
+                  The top 20 apps (10 globally and 10 locally) will be selected
+                  by a judge panel considering the best innovative idea and the
+                  way that the app has been build up.
+                </p>
+                <p></p>
+              </div>
+            </div>
+          </div>
 
-<script type="text/javascript">
-	(function () {
-  "use strict";
+          <!-- Accordian -->
+          <div class="acc">
+            <h3>4. Contact US</h3>
+            <div class="content">
+              <div class="content-inner">
+                <p>
+                  <a
+                    href="mailto: getsync@sltc.ac.lk"
+                    style="text-decoration: none; color: black"
+                    >getsync@sltc.ac.lk</a
+                  >
+                </p>
+                <br />
+                <p>
+                  <a
+                    href="mailto: incodex2021@gmail.com"
+                    style="text-decoration: none; color: black"
+                    >incodex2021@gmail.com</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- faq section content end -->
 
-  // define variables
-  var items = document.querySelectorAll(".timeline li");
+      <script type="text/javascript">
+        $(document).ready(function () {
+          $(".acc h3").click(function () {
+            $(this).next(".content").slideToggle();
+            $(this).parent().toggleClass("active");
+            $(this).parent().siblings().children(".content").slideUp();
+            $(this).parent().siblings().removeClass("active");
+          });
+        });
+      </script>
 
-  function isElementInViewport(el) {
-    var rect = el.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
+      <script type="text/javascript">
+        (function () {
+          "use strict";
 
-  function callbackFunc() {
-    for (var i = 0; i < items.length; i++) {
-      if (isElementInViewport(items[i])) {
-        items[i].classList.add("in-view");
-      }
-    }
-  }
+          // define variables
+          var items = document.querySelectorAll(".timeline li");
 
-  // listen for events
-  window.addEventListener("load", callbackFunc);
-  window.addEventListener("resize", callbackFunc);
-  window.addEventListener("scroll", callbackFunc);
-})();
+          function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+              rect.top >= 0 &&
+              rect.left >= 0 &&
+              rect.bottom <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.right <=
+                (window.innerWidth || document.documentElement.clientWidth)
+            );
+          }
 
-</script>
+          function callbackFunc() {
+            for (var i = 0; i < items.length; i++) {
+              if (isElementInViewport(items[i])) {
+                items[i].classList.add("in-view");
+              }
+            }
+          }
 
-		<section id="contact">
-			<center><h1>Contact Us</h1></center>
-			<span>
-				<ul>
-					<li> Visal Mendiz (Chairman GetSync SLTC)</li>
-					<li> Nemsara Samanwattage (Co-Chairman INCODE-X)</li>
-					<li> Thamadi Jayasinghe (Co-Chairman INCODE-X)</li>
-				</ul>
-			</span>
-			<center>
-			<div class="container-socialcont">
-				<center><h1 style="font-size: 69px; color: #fff;">Social</h1></center>
-				<ul class="social-icons">
-					<li class="social-icons-item social-icons-item-facebook">
-						<a href="https://www.facebook.com/sltcgetsync" target="_blank">
-							<i class="fa fa-facebook"></i>
-						</a>
-					</li>
-					<li class="social-icons-item social-icons-item-twitter">
-						<a href="https://twitter.com/getsyncsltc" target="_blank">
-							<i class="fa fa-twitter"></i>
-						</a>
-					</li>
-					<li class="social-icons-item social-icons-item-instagram">
-						<a href="hhttps://www.instagram.com/sltcgetsync/?hl=en" target="_blank">
-							<i class="fa fa-instagram"></i>
-						</a>
-					</li>
-					<li class="social-icons-item social-icons-item-linkedin">
-						<a href="https://www.linkedin.com/company/get-sync-club-of-sltc/?originalSubdomain=lk" target="_blank">
-							<i class="fa fa-linkedin-square"></i>
-						</a>
-					</li>
-					<li class="social-icons-item social-icons-item-youtube">
-						<a href="https://www.youtube.com/channel/UCEkkKE7lUSMv8s2UqY5IlJg" target="_blank">
-							<i class="fa fa-youtube-play" aria-hidden="true"></i>
-						</a>
-					</li>
-					<li class="social-icons-item social-icons-item-youtube">
-						<a href="https://www.getsyncsltc.com" target="_blank">
-							<i class="fa fa-globe" aria-hidden="true"></i>
-						</a>
-					</li>
-					
-				</ul>
-			</div>
-			</center>
-		</section>
-		
-		<section class="footer">
-				<p>&copy 2021 incode-x, <strong><i>project by GetSync</i></strong>.</p>
-				
-		</section>
-	</dev> <!-- site-main-wrapper -->
-</body>
+          // listen for events
+          window.addEventListener("load", callbackFunc);
+          window.addEventListener("resize", callbackFunc);
+          window.addEventListener("scroll", callbackFunc);
+        })();
+      </script>
+
+      <section id="contact" class="contactfooter">
+        <div class="social-contact-new">
+          <center><h1>Contact Us</h1></center>
+
+            <span>
+              <center><ul class="nameslist" style="color:#fff">
+                <li>Visal Mendiz (Chairman GetSync SLTC)</li>
+                <li>Nemsara Samanwattage (Co-Chairman INCODE-X)</li>
+                <li>Thamadi Jayasinghe (Co-Chairman INCODE-X)</li>
+              </ul></center>
+            </span>
+        </div>
+            <div class="social-icon-new">
+            
+              <center><h1>Social Media</h1></center>
+              
+              <center><ul class="social-icons">
+                  <li class="social-icons-item social-icons-item-facebook">
+                    <a href="https://www.facebook.com/sltcgetsync" target="_blank">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li class="social-icons-item social-icons-item-twitter">
+                    <a href="https://twitter.com/getsyncsltc" target="_blank">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="social-icons-item social-icons-item-instagram">
+                    <a
+                      href="hhttps://www.instagram.com/sltcgetsync/?hl=en"
+                      target="_blank"
+                    >
+                      <i class="fa fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li class="social-icons-item social-icons-item-linkedin">
+                    <a
+                      href="https://www.linkedin.com/company/get-sync-club-of-sltc/?originalSubdomain=lk"
+                      target="_blank"
+                    >
+                      <i class="fa fa-linkedin-square"></i>
+                    </a>
+                  </li>
+                  <li class="social-icons-item social-icons-item-youtube">
+                    <a
+                      href="https://www.youtube.com/channel/UCEkkKE7lUSMv8s2UqY5IlJg"
+                      target="_blank"
+                    >
+                      <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="social-icons-item social-icons-item-youtube">
+                    <a href="https://sltc.ac.lk/" target="_blank">
+                      <i class="fa fa-globe" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul></center>
+
+              </div>
+            
+
+          </div>
+        </section>
+
+
+
+      <section class="footer">
+        <p>
+          &copy 2021 Incode-X <strong><i>Project by GetSync</i></strong>
+        </p>
+      </section>
+    </dev>
+    <!-- site-main-wrapper -->
+  </body>
 </html>
